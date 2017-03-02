@@ -9,6 +9,8 @@ header{
     width: 100vw;
     height: 15vw;
     background-color: rgba(45,209,207,0.5);
+    position: fixed;
+    z-index: 1000;
 }
 .head{
     width: 90%;
