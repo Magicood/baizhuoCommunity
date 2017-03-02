@@ -1,3 +1,22 @@
 <div class="recommendContainer">
+    <div class="recommend" ng-repeat="r in recommend">
+         <div class="userInformation">
+             <div class="userPhoto">
+                 <img src={{r.userPhoto}} alt="">
+             </div>
+             <span class="userName">
+                 {{r.userName}}
+             </span>
+             <span class="sendDate">
+                 {{r.sendDate}}
+             </span>
+         </div>
+         <div class="userRemark">
+             {{r.userRemark}}
+         </div>
+         <div class="image">
+             <img src="{{r.image}}" alt="">
+         </div>
+    </div>
 
 </div>

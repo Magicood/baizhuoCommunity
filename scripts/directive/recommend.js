@@ -3,11 +3,14 @@
  */
 (function (ag) {
     ag.module("bzModule")
-        .directive("recommend",function () {
+        .directive("recommendDir",function () {
             return {
                 restrict:"EA",
                 replace:true,
-                templateUrl:"views/recommend.html"
+                templateUrl:"views/recommend.html",
+                scope:{
+                    recommend:"="
+                }
             }
         })
 })(window.angular);
