@@ -29,17 +29,14 @@ header{
     height: 100%;
 }
 .head .scanning{
-    width: 20%;
+    width: 15vw;
     height: 100%;
     text-align: center;
 }
-.head .scanning > span{
-    font-size: 0.8em;
-    color: #fff;
-}
-.head .scanning .ion-qr-scanner{
-    font-size: 2.4em;
-    line-height: 10vw;
+.head .scanning>img{
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 footer .tabs{
     background-color: rgba(45,209,207,0.5);
