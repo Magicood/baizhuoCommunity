@@ -1,0 +1,46 @@
+body{
+    margin:0;
+    padding:0;
+}
+*{
+    box-sizing: border-box;
+}
+header{
+    width: 100vw;
+    height: 15vw;
+    background-color: rgba(45,209,207,0.5);
+}
+.head{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.head .logo{
+    width: 15vw;
+    height: 100%;
+    float: left;
+}
+.head .logo>img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.head .scanning{
+    width: 20%;
+    height: 100%;
+    text-align: center;
+}
+.head .scanning > span{
+    font-size: 0.8em;
+    color: #fff;
+}
+.head .scanning .ion-qr-scanner{
+    font-size: 2.4em;
+    line-height: 10vw;
+}
+footer .tabs{
+    background-color: rgba(45,209,207,0.5);
+}

@@ -5,14 +5,42 @@
     <title>Title</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <link rel="stylesheet" href="lib/ionic-v1.3.2/css/ionic.min.css">
+    <link rel="stylesheet" href="styles/index.css">
     <script src="lib/ionic-v1.3.2/js/ionic.bundle.min.js"></script>
 </head>
 <body ng-app="bzModule" ng-controller="bzController">
 <header>
+    <div class="head">
+        <a href="" class="logo">
+            <img src="images/logo-min.png" alt="">
+        </a>
+        <div class="scanning">
+            <div class="ion-qr-scanner"></div>
+            <span>扫一扫</span>
+        </div>
+
+    </div>
 </header>
 <ui-view></ui-view>
 <footer>
-
+    <div class="tabs tabs-icon-top">
+        <a class="tab-item" href="#">
+            <i class="icon ion-home"></i>
+            首页
+        </a>
+        <a class="tab-item" href="#">
+            <i class="icon ion-android-person-add"></i>
+            联系人
+        </a>
+        <a class="tab-item" href="#">
+            <i class="icon ion-android-star-outline"></i>
+            收藏
+        </a>
+        <a class="tab-item" href="#">
+            <i class="icon ion-android-contact"></i>
+            我的
+        </a>
+    </div>
 </footer>
 <script>
     (function (angular) {
