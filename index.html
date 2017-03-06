@@ -13,8 +13,10 @@
         <a href="" class="logo">
             <img src="images/logo-min.png" alt="">
         </a>
+        <div class="title">
+            白卓社区
+        </div>
         <div class="scanning">
-
             <img src="images/qr-code.png" alt="">
         </div>
     </div>
@@ -22,7 +24,7 @@
 <div class="white"></div>
 
 <ui-view></ui-view>
-
+<div class="to-top ion-arrow-up-a" ng-click="Top()"></div>
 <footer>
     <div class="tabs tabs-icon-top">
         <a class="tab-item" ui-sref="home">
@@ -48,11 +50,11 @@
 <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
 <script>
     (function (angular) {
-        angular.module('bzModule',['ui.router']);
+        angular.module('bzModule',['ionic','ui.router']);
     })(window.angular);
 </script>
-<script src="scripts/config.js"></script>
 <script src="scripts/directive/recommend.js"></script>
+<script src="scripts/config.js"></script>
 <script src="scripts/index.js"></script>
 </body>
 </html>
