@@ -6,7 +6,6 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <link rel="stylesheet" href="lib/ionic-v1.3.2/css/ionic.min.css">
     <link rel="stylesheet" href="styles/index.css">
-    <script src="lib/ionic-v1.3.2/js/ionic.bundle.min.js"></script>
 </head>
 <body ng-app="bzModule" ng-controller="bzController">
 <header>
@@ -18,13 +17,15 @@
 
             <img src="images/qr-code.png" alt="">
         </div>
-
     </div>
 </header>
+<div class="white"></div>
+
 <ui-view></ui-view>
+
 <footer>
     <div class="tabs tabs-icon-top">
-        <a class="tab-item" href="#">
+        <a class="tab-item" ui-sref="home">
             <i class="icon ion-home"></i>
             首页
         </a>
@@ -42,11 +43,16 @@
         </a>
     </div>
 </footer>
+<script src="cordova.js"></script>
+<script src="lib/ionic-v1.3.2/js/ionic.bundle.min.js"></script>
+<script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
 <script>
     (function (angular) {
-        angular.module('bzModule',[]);
+        angular.module('bzModule',['ui.router']);
     })(window.angular);
 </script>
+<script src="scripts/config.js"></script>
+<script src="scripts/directive/recommend.js"></script>
 <script src="scripts/index.js"></script>
 </body>
 </html>

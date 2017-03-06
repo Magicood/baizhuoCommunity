@@ -7,7 +7,7 @@
             return {
                 restrict:"EA",
                 replace:true,
-                templateUrl:"views/recommend.html",
+                templateUrl:"Url/recommend.html",
                 scope:{
                     recommend:"="
                 }
