@@ -1,0 +1,31 @@
+
+<div>
+    <div class="banner">
+        <div class="banner-inner">
+            <span class="run">欢迎来到社区</span>
+        </div>
+    </div>
+    <div class="recommendContainer">
+        <div class="recommend" ng-repeat="r in recommend">
+            <div class="userInformation">
+                <div class="userPhoto">
+                    <img ng-src={{r.userPhoto}} alt="img">
+                </div>
+                <span class="userName">
+                 {{r.userName}}
+             </span>
+                <span class="sendDate">
+                 {{r.sendDate}}
+             </span>
+            </div>
+            <div class="userRemark">
+                {{r.userRemark}}
+            </div>
+            <div class="image">
+                <img ng-src="{{r.image}}" alt="img">
+            </div>
+        </div>
+    </div>
+    <div class="test"></div>
+</div>
+
