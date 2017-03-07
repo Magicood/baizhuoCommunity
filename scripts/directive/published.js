@@ -9,6 +9,8 @@
                 replace:true,
                 templateUrl:"views/published.html",
                 scope:{
+                    isShowDiv:"&",
+                    showDiv:"="
                 }
             }
         })
