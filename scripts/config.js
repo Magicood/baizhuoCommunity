@@ -7,14 +7,20 @@
             var recommend = {
                 name:'home',
                 url:'',
-                templateUrl:"views/recommend-url.html"
+                templateUrl:"Url/recommend-url.html"
             };
             var published = {
                 name:'publish',
                 url:'/published',
-                templateUrl:"views/published .html"
+                templateUrl:"Url/published-url.html"
+            };
+            var remark = {
+                name:'remark',
+                url:'/remark',
+                templateUrl:"Url/remark-url.html"
             };
             $stateProvider.state(recommend);
             $stateProvider.state(published);
+            $stateProvider.state(remark);
         }]);
 })(window.angular);

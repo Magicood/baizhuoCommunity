@@ -66,8 +66,8 @@ header{
 .head .scanning>img{
     margin: 2vw auto;
     display: block;
-    width: 32px;
-    height: 38px;
+    width: 70%;
+    height: 82%;
 }
 .head .title{
     width: 40%;
@@ -142,6 +142,7 @@ header{
     margin-left: 6vw;
 }
 .recommendContainer .sendDate{
+    font-size: 14px;
     float: right;
     color:#444444 ;
     font-family: 微软雅黑;
@@ -163,6 +164,7 @@ header{
     overflow:hidden;
 }
 .recommendContainer .image{
+    margin-top:1vh;
     padding-left: 18vw;
     width: 100%;
     height: auto;
@@ -185,7 +187,9 @@ footer .tabs{
     width: 100vw;
     height: 1000vw;
 }
-
+.scroll-content{
+    top:27vw;
+}
 .remarkContainer{
     width:100vw;
     height:auto;
@@ -232,11 +236,8 @@ footer .tabs{
     font-size: 14px;
     color:#444444;
     font-family: 微软雅黑;
-    word-break:break-all;
-    display:-webkit-box;
-    -webkit-line-clamp:2;
-    -webkit-box-orient:vertical;
-    overflow:hidden;
+
+    overflow:auto;
 }
 .remarkContainer .image{
     padding-left: 18vw;

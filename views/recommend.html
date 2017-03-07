@@ -1,8 +1,10 @@
 <div class="recommendContainer">
-    <div class="recommend" ng-repeat="r in recommend" ng-click="remarkHostGet(r)">
+    <div class="recommend" ui-sref="remark"
+         ng-repeat="r in recommend"
+         ng-click="remarkHostGet(r)">
          <div class="userInformation">
              <div class="userPhoto">
-                 <img src={{r.userPhoto}} alt="">
+                 <img ng-src={{r.userPhoto}} alt="">
              </div>
              <span class="userName">
                  {{r.userName}}
@@ -15,7 +17,7 @@
              {{r.userRemark}}
          </div>
          <div class="image">
-             <img src="{{r.image}}" alt="">
+             <img ng-src="{{r.image}}" alt="">
          </div>
     </div>
 

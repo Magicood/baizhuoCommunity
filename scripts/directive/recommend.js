@@ -7,11 +7,12 @@
             return {
                 restrict:"EA",
                 replace:true,
-                templateUrl:"Url/recommend.html",
+                templateUrl:"views/recommend.html",
                 scope:{
                     recommend:"=",
                     remarkHostGet:"&"
-                }
+                },
+                controller:"recommendController"
             }
         })
 })(window.angular);

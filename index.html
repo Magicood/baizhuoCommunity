@@ -22,14 +22,13 @@
     </div>
 </header>
 <div class="white"></div>
-<ion-content >
-    <remark-dir remark-host="remarkHost" remark-other="remarkOther"></remark-dir>
-    <ion-infinite-scroll
-            on-infinite="loadMoreRemark()"
-            distance="1%"
-            icon="ion-loading-c">
-    </ion-infinite-scroll>
-</ion-content>
+<div class="banner">
+    <div class="banner-inner">
+        <span class="run">
+            欢迎来到白卓社区
+        </span>
+    </div>
+</div>
 <ui-view></ui-view>
 <div class="to-top ion-arrow-up-a" ng-click="Top()"></div>
 <footer>
@@ -38,7 +37,7 @@
             <i class="icon ion-home"></i>
             首页
         </a>
-        <a class="tab-item" href="#">
+        <a class="tab-item" ui-sref="publish">
             <i class="icon ion-android-person-add"></i>
             联系人
         </a>
@@ -62,6 +61,7 @@
 </script>
 <script src="scripts/directive/recommend.js"></script>
 <script src="scripts/directive/remark.js"></script>
+<script src="scripts/directive/published.js"></script>
 <script src="scripts/config.js"></script>
 <script src="scripts/index.js"></script>
 </body>

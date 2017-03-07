@@ -7,9 +7,8 @@
             return {
                 restrict:"EA",
                 replace:true,
-                templateUrl:"Url/published-url.html",
+                templateUrl:"views/published.html",
                 scope:{
-
                 }
             }
         })
