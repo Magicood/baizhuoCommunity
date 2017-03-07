@@ -9,7 +9,8 @@
                 replace:true,
                 templateUrl:"Url/recommend.html",
                 scope:{
-                    recommend:"="
+                    recommend:"=",
+                    remarkHostGet:"&"
                 }
             }
         })
