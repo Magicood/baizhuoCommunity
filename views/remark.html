@@ -1,0 +1,47 @@
+<div class="remarkContainer">
+    <div class="remarkHost">
+        <div class="userInformation">
+            <div class="userPhoto">
+                <img src={{remarkHost.userPhoto}} alt="">
+            </div>
+            <span class="userName">
+                 {{remarkHost.userName}}
+             </span>
+            <span class="host">楼主</span>
+            <span class="sendDate">
+                 {{remarkHost.sendDate}}
+             </span>
+        </div>
+        <div class="userRemark">
+            {{remarkHost.userRemark}}
+        </div>
+        <div class="image">
+            <img src="{{remarkHost.image}}" alt="">
+        </div>
+        <div class="floor">
+            <span>第1楼</span>
+        </div>
+    </div>
+    <div class="remarkOther" ng-repeat="r in remarkOther">
+        <div class="userInformation">
+            <div class="userPhoto">
+                <img ng-src={{r.userPhoto}} alt="">
+            </div>
+            <span class="userName">
+                 {{r.userName}}
+             </span>
+            <span class="sendDate">
+                 {{r.sendDate}}
+             </span>
+        </div>
+        <div class="userRemark">
+            {{r.userRemark}}
+        </div>
+        <div class="image">
+            <img ng-src={{r.image}} alt="">
+        </div>
+        <div class="floor" >
+            <span>第{{r.floor}}楼</span>
+        </div>
+    </div>
+</div>
