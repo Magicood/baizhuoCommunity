@@ -21,9 +21,17 @@
         </div>
     </div>
 </header>
-<div class="white"></div>
 
-<ui-view></ui-view>
+<div class="white"></div>
+<div class="banner">
+    <div class="banner-inner">
+        <span class="run">欢迎来到白卓社区</span>
+    </div>
+</div>
+<ion-content>
+
+    <ui-view></ui-view>
+</ion-content>
 <div class="to-top ion-arrow-up-a" ng-click="Top()"></div>
 <footer>
     <div class="tabs tabs-icon-top">
@@ -31,7 +39,7 @@
             <i class="icon ion-home"></i>
             首页
         </a>
-        <a class="tab-item" href="#">
+        <a class="tab-item" ui-sref="publish">
             <i class="icon ion-android-person-add"></i>
             联系人
         </a>
