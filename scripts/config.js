@@ -19,8 +19,14 @@
                 url:'/remark',
                 templateUrl:"Url/remark-url.html"
             };
+            var news = {
+                name:'news',
+                url:'/news',
+                templateUrl:"Url/news-url.html"
+            };
             $stateProvider.state(recommend);
             $stateProvider.state(published);
             $stateProvider.state(remark);
+            $stateProvider.state(news);
         }]);
 })(window.angular);

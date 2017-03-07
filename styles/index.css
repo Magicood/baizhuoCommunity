@@ -274,6 +274,88 @@ footer .tabs{
     padding-right: 2vw;
     border-bottom: 1px solid #e7e7e7;
 }
+.carousel {
+    width: 100%;
+    height: 200px;
+    background-color: #4cd964;
+}
+.carousel img {
+    width: 100%;
+    height: 200px;
+}
+
+.recommend{
+    width: 100%;
+    height: 610px;
+}
+.recommend-container{
+    width: 95%;
+    height: 100%;
+    margin: auto;
+}
+.recommend-title{
+    width: 100%;
+    height: 50px;
+}
+.recommend-title .inner{
+    font-size: 16px;
+    line-height: 50px;
+    font-weight: bold;
+}
+.recommend-title div{
+    float: right;
+    font-size: 10px;
+    line-height: 50px;
+}
+.book-inner{
+    width: 100%;
+    height: 130px;
+    font-family: 楷体;
+    border-top: 1px solid gray;
+}
+.book-image{
+    width: 50%;
+    height: 90%;
+    float: left;
+    margin-top: 10px;
+}
+.book-image img{
+    width: 90%;
+    height: 100px;
+}
+.book-text{
+    width: 50%;
+    height: 90%;
+    float: left;
+    margin-top: 10px;
+}
+.book-one{
+    width: 80%;
+    height: 20px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.book-three{
+    width: 80%;
+    height: 20px;
+    margin-top: 20px;
+    font-size: 12px;
+    border: 1px solid gray;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 5px;
+}
+.book-four{
+    width: 100%;
+    height: 50px;
+    font-size: 10px;
+    line-height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
 
 
 

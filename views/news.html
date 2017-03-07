@@ -1,0 +1,36 @@
+
+<div>
+    <div class="carousel">
+        <ion-slide-box on-slide-changed="slideHasChanged($index)" active-slide="myActiveSlide"
+                       does-continue="true" auto-play="true" slide-interval="2000"
+                       delegate-handle="carouselImage" on-touch="slideBoxStop()">
+            <ion-slide ng-repeat="c in carouselImage">
+                <div class="box">
+                    <img ng-src="{{c.imageSrc}}" alt="">
+                </div>
+            </ion-slide>
+        </ion-slide-box>
+    </div>
+
+    <div class='recommend'>
+        <div class='recommend-container'>
+            <div class='recommend-title'>
+                <span class='inner'>推荐热点</span>
+                <div on-tap='change()'>
+                    <span class='glyphicon glyphicon-refresh'></span>
+                    <div>换一换</div>
+                </div>
+            </div>
+            <div class='book-inner' ng-repeat='b in bookInner'>
+                <div class='book-image'>
+                    <img ng-src='{{b.bookSrc}}' alt=''>
+                </div>
+                <div class='book-text'>
+                    <div class='book-one'>{{b.one}}</div>
+                    <div class='book-three'>{{b.three}}</div>
+                    <div class='book-four'>{{b.four}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
