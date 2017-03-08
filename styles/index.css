@@ -89,7 +89,13 @@ header{
     width: 100vw;
     height: 12vw;
     background-color: rgba(254,200,0,1);
+    position: relative;
+    display: flex;
+    align-items: center;
 
+}
+.banner .left{
+    font-size: 2.4em;
 }
 .banner .banner-inner{
     width: 60%;
@@ -183,6 +189,7 @@ header{
 footer .tabs{
     background-color: rgba(45,209,207,1);
     z-index: 1000;
+    height: 12vw;
 }
 .test{
     width: 100vw;
@@ -283,10 +290,15 @@ footer .tabs{
     width: 100%;
     height: 10vw;
     position: fixed;
-    bottom:12vw;
+    bottom:0;
     background-color: rgba(254,0,0,0.5);
 }
-.send-content >span{
+
+.send-content form{
+    width: 100%;
+    height: 10vw;
+}
+.send-content span{
     font-family: 微软雅黑;
     text-align: center;
     line-height: 8vw;
@@ -299,7 +311,7 @@ footer .tabs{
     border-radius: 5px;
     /*border: 1px solid #4d4d4d;*/
 }
-.send-content>input{
+.send-content input{
     display: block;
     width: 80%;
     height: 90%;

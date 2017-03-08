@@ -8,52 +8,7 @@
     <link rel="stylesheet" href="styles/index.css">
 </head>
 <body ng-app="bzModule" ng-controller="bzController">
-<header>
-    <div class="head">
-        <a href="" class="logo">
-            <img src="images/logo-min.png" alt="">
-        </a>
-        <div class="title">
-            白卓社区
-        </div>
-        <div class="scanning">
-            <img src="images/qr-code.png" alt="">
-        </div>
-    </div>
-</header>
-<div class="white"></div>
-<div class="banner">
-    <div class="banner-inner">
-        <span class="run">
-            欢迎来到白卓社区
-        </span>
-    </div>
-</div>
-
     <ui-view></ui-view>
-
-
-<div class="to-top ion-arrow-up-a" ng-click="Top()"></div>
-<footer>
-    <div class="tabs tabs-icon-top">
-        <a class="tab-item" ui-sref="home">
-            <i class="icon ion-home"></i>
-            首页
-        </a>
-        <a class="tab-item" ui-sref="publish">
-            <i class="icon ion-android-person-add"></i>
-            联系人
-        </a>
-        <a class="tab-item" ui-sref="news">
-            <i class="icon ion-android-star-outline"></i>
-            新闻
-        </a>
-        <a class="tab-item" href="#">
-            <i class="icon ion-android-contact"></i>
-            我的
-        </a>
-    </div>
-</footer>
 <script src="cordova.js"></script>
 <script src="lib/ionic-v1.3.2/js/ionic.bundle.min.js"></script>
 <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>

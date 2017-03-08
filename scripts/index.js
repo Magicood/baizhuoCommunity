@@ -5,7 +5,9 @@
     ag.module("bzModule")
         .controller("bzController",["$scope","$ionicScrollDelegate",
             function ($scope,$scroll) {
-
+            $scope.Return = function () {
+                window.history.back();
+            };
             $scope.showDiv = true;
                 $scope.Top = function () {
                     $scroll.scrollTop(true);
@@ -95,13 +97,13 @@
             ];
 
             $scope.isShowDiv = function () {
-
                 $scope.showDiv = false;
             }
         }])
         .controller("recommendController",["$scope",function ($scope) {
             $scope.remarkHostGet=function (host) {
                 localStorage.setItem("host",JSON.stringify(host));
+                $scope.$parent.fdsf = host;
             };
         }])
 })(window.angular);
