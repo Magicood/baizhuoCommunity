@@ -6,7 +6,9 @@
             icon="ion-loading-c">
     </ion-infinite-scroll>
 </ion-content>
-<div class="send-content">
-    <span>发送</span>
-    <input type="text"/>
+<div class="send-content" >
+    <form>
+    <span ng-click="pushMessage({Msg:remarkMessage.value})">发送</span>
+    <input type="text" name="remarkMessage"/>
+    </form>
 </div>
