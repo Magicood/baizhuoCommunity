@@ -1,0 +1,72 @@
+<form class="form-register" action="/register" method="get" name="userForm" novalidate>
+    <h2 class="form-signin-heading">注册</h2>
+    <p class="form-warning"><span class="row-warning-symbol">*</span>是必添的</p>
+    <label class="item item-input">
+        <label for="userAccount" class="input-label">
+            <span class="row-warning-symbol" ng-show="userForm.userAccount.$error.required">*</span>
+            账号
+        </label>
+        <input type="text" id="userAccount" placeholder="请输入账号.." ng-minlength="5" ng-maxlength="14"
+               name="userAccount" ng-model="userAccount" required autofocus>
+        <div class="row-warning" ng-show="userForm.userAccount.$dirty && userForm.userAccount.$invalid"><!--被脏 && 无效-->
+            <span ng-show="userForm.userAccount.$error.required">用户名是必须的！</span><!--错误：空-->
+            <span ng-show="userForm.userAccount.$error.minlength">用户名太短！</span>
+            <span ng-show="userForm.userAccount.$error.maxlength">用户名太长！</span>
+        </div>
+    </label>
+    <label class="item item-input">
+        <label for="userPassword" class="input-label">
+            <span class="row-warning-symbol" ng-show="userForm.userPassword.$error.required">*</span>
+            密码
+        </label>
+        <input type="password" id="userPassword" placeholder="请输入密码.." ng-minlength="6"
+               name="userPassword" ng-model="userPassword" required autofocus>
+        <div class="row-warning" ng-show="userForm.userPassword.$dirty && userForm.userPassword.$invalid">
+            <span ng-show="userForm.userPassword.$error.required">密码是必须的！</span>
+            <span ng-show="userForm.userPassword.$error.minlength">密码太短！</span>
+        </div>
+    </label>
+    <label class="item item-input">
+        <label for="confirmPsd" class="input-label">
+            <span class="row-warning-symbol"
+                  ng-show="(userForm.confirmPsd.$error.required || userPassword!=confirmPsd)">*</span>
+            确认密码
+        </label>
+        <input type="password" id="confirmPsd" placeholder="请输入确认密码.."
+               name="confirmPsd" ng-model="confirmPsd" required autofocus>
+        <div class="row-warning" ng-show="userForm.confirmPsd.$dirty && userForm.confirmPsd.$invalid">
+            <span ng-show="userForm.confirmPsd.$error.required">确认密码是必须的！</span>
+        </div>
+        <div class="row-warning" ng-show="userForm.confirmPsd.$dirty && userForm.confirmPsd.$valid">
+            <span ng-show="userPassword!=confirmPsd">两次密码不相等！</span>
+        </div>
+    </label>
+    <label class="item item-input">
+        <label for="mobile" class="input-label">
+            电话号码
+        </label>
+        <input type="number" id="mobile" placeholder="请输入电话号码.." ng-minlength="5" ng-maxlength="12"
+               name="mobile" ng-model="mobile" autofocus>
+        <div class="row-warning" ng-show="userForm.mobile.$dirty && userForm.mobile.$invalid">
+            <span ng-show="userForm.mobile.$error.minlength">电话号码位数太短！</span>
+            <span ng-show="userForm.mobile.$error.maxlength">电话号码位数太长！</span>
+        </div>
+    </label>
+    <label class="item item-input">
+        <label for="email" class="input-label">
+            <span class="row-warning-symbol" ng-show="userForm.email.$error.required">*</span>
+            邮箱
+        </label>
+        <input type="email" id="email" placeholder="请输入邮箱.." name="email" ng-model="email" required autofocus>
+        <div class="row-warning" ng-show="userForm.email.$dirty && userForm.email.$invalid">
+            <span ng-show="userForm.email.$error.required">邮箱是必须的！</span>
+            <span ng-show="userForm.email.$error.email">邮箱格式不正确！</span>
+        </div>
+    </label>
+    <button type="submit" ng-disabled="
+            userForm.userAccount.$invalid ||
+            userForm.userPassword.$invalid ||
+            userForm.confirmPsd.$invalid ||
+            userForm.email.$invalid;" class="button button-block button-positive">登录
+    </button>
+</form>

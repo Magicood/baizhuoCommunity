@@ -24,9 +24,17 @@
                 url:'/news',
                 templateUrl:"Url/news-url.html"
             };
+            var user = {
+                name:'user',
+                url:'/user',
+                templateUrl:"Url/user-url.html",
+                controller:"signinController"
+            };
+
             $stateProvider.state(recommend);
             $stateProvider.state(published);
             $stateProvider.state(remark);
             $stateProvider.state(news);
+            $stateProvider.state(user);
         }]);
 })(window.angular);

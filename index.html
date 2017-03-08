@@ -6,6 +6,8 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <link rel="stylesheet" href="lib/ionic-v1.3.2/css/ionic.min.css">
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/register.css">
+    <link rel="stylesheet" href="styles/signin.css">
 </head>
 <body ng-app="bzModule" ng-controller="bzController">
 <header>
@@ -48,7 +50,7 @@
             <i class="icon ion-android-star-outline"></i>
             新闻
         </a>
-        <a class="tab-item" href="#">
+        <a class="tab-item" ui-sref="user">
             <i class="icon ion-android-contact"></i>
             我的
         </a>
@@ -68,6 +70,9 @@
 <script src="scripts/directive/news.js"></script>
 <script src="scripts/server/cordovaAjax.js"></script>
 <script src="scripts/config.js"></script>
+<script src="scripts/server/factory-signin.js"></script>
+<script src="scripts/directive/directive-signin.js"></script>
+<script src="scripts/directive/directive-register.js"></script>
 <script src="scripts/index.js"></script>
 </body>
 </html>

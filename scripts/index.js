@@ -105,4 +105,69 @@
                 localStorage.setItem("host",JSON.stringify(host));
             };
         }])
+        .controller("signinController",["$scope","factorySignin",function ($scope,factorySignin) {
+            //查看cookie
+            $scope.fSigninCookie = function () {
+                var account = getCookie('account');
+                var password = getCookie('password');
+                if (account != "") {
+                    $scope.formSignin = {
+                        account:account,
+                        password:password
+                    };
+                    $scope.checkModel = true;
+                }
+            };
+
+            //登陆
+            $scope.submit = function () {
+                var formSignin = {
+                    checkModel: $scope.checkModel,
+                    account: $scope.formSignin.account,
+                    password: $scope.formSignin.password
+                };
+                //提交登陆
+                factorySignin.getFunctions(formSignin).then(function (res) {
+                    $scope.user = res.user;
+                    sessionStorage.user = res.user;
+                });
+
+                //选中是true
+                if ($scope.checkModel) {
+                    //没有就创建;有就不管，不改动保存时间;有但是不是该用户创建
+                    if (getCookie('account') != formSignin.account) {
+                        setCookie('account', formSignin.account, 30);
+                        setCookie('password', formSignin.password, 30);
+                    }
+                } else {
+                    //没有就不管，有就使过期时间为0，立马过期
+                    if (getCookie('account') != "") {
+                        setCookie('account', formSignin.account, 0);
+                        setCookie('password', formSignin.password, 0);
+                    }
+                }
+            };
+
+            //cookie 的名称、值以及过期天数。
+            function setCookie(c_name, value, expiredays) {
+                var exdate = new Date();
+                exdate.setDate(exdate.getDate() + expiredays);
+                document.cookie = c_name + "=" + escape(value) +
+                    ((expiredays == null) ? "" : ";expires=" + exdate.toGMTString());
+            }
+
+            //获取cookie
+            function getCookie(c_name) {
+                if (document.cookie.length > 0) {
+                    c_start = document.cookie.indexOf(c_name + "=");
+                    if (c_start != -1) {
+                        c_start = c_start + c_name.length + 1;
+                        c_end = document.cookie.indexOf(";", c_start);
+                        if (c_end == -1) c_end = document.cookie.length;
+                        return unescape(document.cookie.substring(c_start, c_end));
+                    }
+                }
+                return ""
+            }
+        }])
 })(window.angular);

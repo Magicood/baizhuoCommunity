@@ -449,4 +449,75 @@ footer .tabs{
     font-family: 微软雅黑;
 }
 
+.slider{
+    height: 100%;
+}
 
+.slider-slides:after{
+    display:block;
+    clear:both;
+    content:"";
+    visibility:hidden;
+    height:0
+}
+
+.user-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: RGBA(255,255,255,0.8);
+    padding-bottom: 1px;
+}
+
+.user-container > .user-bg-box{
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.user-container .user-bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation:userBg 40s infinite;
+}
+
+.user-container .user-mask{
+    position: absolute;
+    background: #ffffff;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+.user-container span{
+    position: absolute;
+    bottom: 10px;
+}
+
+@keyframes userBg {
+    0% {transform:scale(1,1)}
+    50% {transform:scale(1.2,1.2)}
+    100% {transform:scale(1,1)}
+}
+
+.portrait{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    top: -50px;
+    left: 20px;
+    background: #ffffff;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.portrait img{
+    width: 100%;
+    height: 100%;
+}
