@@ -7,7 +7,7 @@
                     var cordovaHttp = cordova.plugin.http;
                     cordovaHttp.post("/http://192.168.0.100:8888/data",content,null,function (res) {
                         try{
-                            
+                            alert(res.data);
                         }catch(e){
                             
                         }

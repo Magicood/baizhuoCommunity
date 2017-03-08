@@ -1,0 +1,46 @@
+.row:after{
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+.form-register{
+    position: relative;
+    width: 90%;
+    min-width: 350px;
+    height: auto;
+    margin: 100px auto 0 auto;
+    border: 1px solid #666666;
+    border-radius: 5px;
+    padding: 20px;
+    padding-bottom: 0;
+    background-color: RGBA(255,255,255,0.8);
+}
+
+.form-register .form-warning{
+    position: absolute;
+    top: 30px;
+    right: 20px;
+}
+
+.form-register .item-input{
+    position: relative;
+}
+
+.form-register .input-label{
+    position: relative;
+}
+
+.form-register .row-warning-symbol{
+    color: red;
+    position: absolute;
+    left:-10px;
+}
+
+.form-register .row-warning{
+    position: absolute;
+    color: red;
+    bottom: 0;
+    right: 0;
+    font-size: 14px;
+}

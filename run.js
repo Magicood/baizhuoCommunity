@@ -11,7 +11,9 @@ var router = express.Router();
 
 router.post("/data",function (req,res) {
      if(req.body){
-
+          if(req.body.msg){
+               res.json(req.body.msg);
+          }
      }
 });
 
