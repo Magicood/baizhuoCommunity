@@ -3,9 +3,9 @@
  */
 (function (ag) {
     ag.module("bzModule")
-        .controller("bzController",["$scope","$ionicScrollDelegate","cordovaFuc",
-            function ($scope,$scroll,cordovaFuc) {
-            document.addEventListener("deviceready",function () {
+        .controller("bzController",["$scope","$ionicScrollDelegate",
+            function ($scope,$scroll) {
+
                 $scope.showDiv = true;
                 $scope.Top = function () {
                     $scroll.scrollTop(true);
@@ -14,6 +14,9 @@
                     $scope.remarkHost = JSON.parse(localStorage.getItem("host"));
                 }
                 lll();
+                $scope.Return = function () {
+                    window.history.back();
+                };
                 $scope.recommend=[
                     {
                         userName:"耗子",
@@ -92,13 +95,11 @@
                     }
                 ];
                 $scope.isShowDiv = function () {
-
                     $scope.showDiv = false;
                 };
-                $scope.pushMessage=function (msg) {
-                    cordovaFuc.ajaxPost(msg)
-                }
-            },false);
+                // $scope.pushMessage=function (msg) {
+                //     // cordovaFuc.ajaxPost(msg)
+                // }
         }])
         .controller("recommendController",["$scope",function ($scope) {
             $scope.remarkHostGet=function (host) {

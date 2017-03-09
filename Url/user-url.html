@@ -1,28 +1,72 @@
-<div class="container form-container">
-    <ion-slide-box on-slide-changed="slideHasChanged($index)" does-continue="false">
-        <ion-slide>
-            <div class="user-container">
-                <div class="user-mask" ng-show="sessionStorage.user">
-                    你还没有登陆哦
-                </div>
-                <div class="user-bg-box">
-                    <img class="user-bg" src="images/电脑2.png">
-                </div>
-                <div class="portrait">
-                    <img src="images/genji.jpg">
-                </div>
-                <div>{{user}}</div>
-                <div>待添加的内容</div>
-            </div>
-        </ion-slide>
-        <ion-slide>
-            <!--登陆-->
-            <directive-signin submit="submit()" form-signin="formSignin"
-                              check-model="checkModel" f-signin-cookie=fSigninCookie()></directive-signin>
-        </ion-slide>
-        <ion-slide>
-            <!--注册-->
-            <directive-register></directive-register>
-        </ion-slide>
-    </ion-slide-box>
+<header>
+    <div class="head">
+        <a href="" class="logo">
+            <img src="images/logo-min.png" alt="">
+        </a>
+        <div class="title">
+            登录/注册
+        </div>
+        <div class="scanning">
+            <img src="images/qr-code.png" alt="">
+        </div>
+    </div>
+</header>
+<div class="white"></div>
+<div class="banner">
+    <div class="banner-inner">
+        <span class="run">
+            欢迎来到白卓社区
+        </span>
+    </div>
 </div>
+<ion-content>
+    <div class="container form-container">
+        <ion-slide-box on-slide-changed="slideHasChanged($index)" does-continue="false">
+            <ion-slide>
+                <div class="user-container">
+                    <div class="user-mask" ng-show="sessionStorage.user">
+                        你还没有登陆哦
+                    </div>
+                    <div class="user-bg-box">
+                        <img class="user-bg" src="images/电脑2.png">
+                    </div>
+                    <div class="portrait">
+                        <img src="images/genji.jpg">
+                    </div>
+                    <div>{{user}}</div>
+                    <div>待添加的内容</div>
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <!--登陆-->
+                <directive-signin submit="submit()" form-signin="formSignin"
+                                  check-model="checkModel" f-signin-cookie=fSigninCookie()></directive-signin>
+            </ion-slide>
+            <ion-slide>
+                <!--注册-->
+                <directive-register></directive-register>
+            </ion-slide>
+        </ion-slide-box>
+    </div>
+</ion-content>
+
+<footer>
+    <div class="tabs tabs-icon-top">
+        <a class="tab-item" ui-sref="home">
+            <i class="icon ion-home"></i>
+            首页
+        </a>
+        <a class="tab-item" ui-sref="publish">
+            <i class="icon ion-android-person-add"></i>
+            联系人
+        </a>
+        <a class="tab-item" ui-sref="news">
+            <i class="icon ion-android-star-outline"></i>
+            新闻
+        </a>
+        <a class="tab-item" ui-sref="user">
+            <i class="icon ion-android-contact"></i>
+            我的
+        </a>
+    </div>
+</footer>
