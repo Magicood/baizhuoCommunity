@@ -14,9 +14,6 @@
                     $scope.remarkHost = JSON.parse(localStorage.getItem("host"));
                 }
                 lll();
-                $scope.Return = function () {
-                    window.history.back();
-                };
                 $scope.recommend=[
                     {
                         userName:"耗子",

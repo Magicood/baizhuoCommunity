@@ -429,7 +429,6 @@ footer .tabs{
     line-height: 16vw;
     width: 20%;
     height: 90%;
-
     float: left;
 }
 .published .push-image .camera >div{
@@ -533,7 +532,7 @@ footer .tabs{
 /*登陆*/
 .form-container{
     width: 100vw;
-    height: 100%;
+    height: 90vh;
     padding-top: 1px;
     animation:form-signin-bg 30s infinite;
 }
