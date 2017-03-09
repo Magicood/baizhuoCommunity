@@ -529,6 +529,106 @@ footer .tabs{
     width: 100%;
     height: 100%;
 }
-.slider-pager{
-    display: none;
+
+/*登陆*/
+.form-container{
+    width: 100vw;
+    height: 100%;
+    padding-top: 1px;
+    animation:form-signin-bg 30s infinite;
+}
+
+.form-signin{
+    width: 90%;
+    min-width: 350px;
+    margin: 150px auto 0 auto;
+    padding: 20px;
+    background-color: RGBA(255,255,255,0.8);
+    padding-bottom: 1px;
+}
+
+.list{
+    margin-bottom: 10px;
+}
+
+.form-signin-heading{
+    padding-left: 16px;
+}
+
+.checkbox{
+    margin-top: 10px;
+}
+
+.checkbox > input{
+    float: left;
+    margin: 0 20px;
+}
+
+.checkbox > label{
+    display: block;
+    height: 28px;
+    line-height: 28px;
+    float: left;
+}
+
+@keyframes form-signin-bg {
+    0% {background-color: HSLA(0,50%,60%,1) ;}
+    10% {background-color: HSLA(36,50%,60%,1) ;}
+    20% {background-color: HSLA(72,50%,60%,1) ;}
+    30% {background-color: HSLA(108,50%,60%,1) ;}
+    40% {background-color: HSLA(144,50%,60%,1) ;}
+    50% {background-color: HSLA(180,50%,60%,1) ;}
+    60% {background-color: HSLA(216,50%,60%,1) ;}
+    70% {background-color: HSLA(252,50%,60%,1) ;}
+    80% {background-color: HSLA(288,50%,60%,1) ;}
+    90% {background-color: HSLA(324,50%,60%,1) ;}
+    100% {background-color: HSLA(360,50%,60%,1) ;}
+}
+
+/*注册*/
+.row:after{
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+.form-register{
+    position: relative;
+    width: 90%;
+    min-width: 350px;
+    height: auto;
+    margin: 100px auto 0 auto;
+    border: 1px solid #666666;
+    border-radius: 5px;
+    padding: 20px;
+    padding-bottom: 0;
+    background-color: RGBA(255,255,255,0.8);
+}
+
+.form-register .form-warning{
+    position: absolute;
+    top: 30px;
+    right: 20px;
+}
+
+.form-register .item-input{
+    position: relative;
+}
+
+.form-register .input-label{
+    position: relative;
+}
+
+.form-register .row-warning-symbol{
+    color: red;
+    position: absolute;
+    left:-10px;
+}
+
+.form-register .row-warning{
+    position: absolute;
+    color: red;
+    bottom: 0;
+    right: 0;
+    font-size: 14px;
 }
